@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Copyright © 2016 Aaron Smith & Xenia Zantello
+-->
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Future Value Calculator</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="phoneh1">Future Value <br> Calculator</h1>
+            <h1 id="desktoph1">Future Value Calculator</h1>
+        </header>
+        <main>
+            <form id="calculator" name="calculator" method="post" 
+                  action="CalculatorServlet">
+                <fieldset>
+                    
+                    <label for="amount">Investment Amount </label>
+                    <input name="amount" type="text" tabindex="100" autofocus required>
+                       
+                        
+                    <label for="rate">Yearly Interest Rate </label>
+                    <input name="rate" type="text" class="input" id="rate" tabindex="110" required>
+                        
+                    <label for="year">Number of Years </label>
+                    <input name="year" type="text" tabindex="120"  required placeholder="Integer number of years">
+                    
+                    <input name="future" type="hidden">
+                    
+                    <label></label>
+                    <input id="calculate" type="submit" value="Calculate" >
+                </fieldset>
+                      
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2016, Aaron Smith and Xenia Zantello</p>
+        </footer>
+    </body>
+</html>
