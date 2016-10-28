@@ -1,11 +1,7 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Oct 26, 2016, 6:58:10 PM
-    Author     : Aaron
+
+Copyright © 2016 Aaron Smith & Xenia Zantello
+
 */
 @media screen and (max-width: 600px) {
 #phoneh1 {
@@ -76,6 +72,7 @@ and open the template in the editor.
     footer p {
         text-align: left;
         padding-left: 2em;
+        font-family: Arial, Verdana, sans-serif;
     }
 }
 
@@ -150,5 +147,6 @@ and open the template in the editor.
     footer p {
         text-align: left;
         padding-left: 2em;
+        font-family: Arial, Verdana, sans-serif;
     }
 }

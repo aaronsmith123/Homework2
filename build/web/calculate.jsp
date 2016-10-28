@@ -11,10 +11,11 @@ Copyright © 2016 Aaron Smith & Xenia Zantello
 <%@ include file="/header.html" %>
     <body>
         <jsp:useBean id="user" scope="request" class="homework2.user.User"/>
-        <label>Investment Amount:</label> <span><fmt:setLocale value="en_US"/><fmt:formatNumber value="${user.amount}" type="currency"/></span><br>
-    <label>Yearly Interest Rate:</label> <span><fmt:setLocale value="en_US"/><fmt:formatNumber minFractionDigits="1" maxFractionDigits="3" value="${user.rate / 100}" type="percent"/></span><br>
-    <label>Number of Years:</label> <span><jsp:getProperty name="user" property="year"/></span><br>
-    <label id="future">Future Value: </label> <span></span>
+        <input type="hidden" name="action" value="calculate">
+        <label>Investment Amount:</label> <span><fmt:setLocale value="en_US"/><fmt:formatNumber value="<%=user.getAmount()%>" type="currency"/></span><br>
+        <label>Yearly Interest Rate:</label> <span><fmt:setLocale value="en_US"/><fmt:formatNumber minFractionDigits="1" maxFractionDigits="6" value="<%=(Double.parseDouble(user.getRate()) / 100.0 )%>" type="percent"/></span><br>
+        <label>Number of Years:</label> <span><jsp:getProperty name="user" property="year"/></span><br>
+        <label id="future">Future Value: </label> <span><fmt:setLocale value="en_US"/><fmt:formatNumber value="<%=user.getFuture()%>" type="currency"/></span>
     
 
     

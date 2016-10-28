@@ -6,7 +6,6 @@ Copyright © 2016 Aaron Smith & Xenia Zantello
 package homework2.calculator;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,19 +32,29 @@ public class CalculatorServlet extends HttpServlet {
             HttpServletResponse response)
             throws ServletException, IOException {
         String url = "/index.html";
+        
         String action = request.getParameter("action");
         
         if (action == null) {
-        action = "CalculatorServlet";  
+        action = "calculate";  
         }
         
-        
-        if (action.equals("CalculatorServlet")) {
-        System.out.println("CalculatorServlet action: " + action);
+        if (action.equals("calculate")) {
+            url = "/index.html";
+        } 
+        else if (action.equals("add")) {
+            
         String amount = request.getParameter("amount");
         String rate = request.getParameter("rate");
         String year = request.getParameter("year");
         String future = request.getParameter("future");
+        
+        Double rateDouble = Double.parseDouble(rate);
+        Double amountDouble = Double.parseDouble(amount);
+        Double yearDouble = Double.parseDouble(year);
+        rateDouble = (1 + (rateDouble / 100.0));
+        
+        future = amountDouble * Math.pow(rateDouble, yearDouble) + "";
         
         
         
@@ -53,9 +62,10 @@ public class CalculatorServlet extends HttpServlet {
         User user = new User(amount, rate, year, future);
 
         request.setAttribute("user", user);
+        url = "/calculate.jsp";
         }
         
-        url = "/calculate.jsp";
+        
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);

@@ -13,12 +13,13 @@ Copyright © 2016 Aaron Smith & Xenia Zantello
         <header>
             <h1 id="phoneh1">Future Value <br> Calculator</h1>
             <h1 id="desktoph1">Future Value Calculator</h1>
+            
         </header>
         <main>
             <form id="calculator" name="calculator" method="post" 
                   action="CalculatorServlet">
                 <fieldset>
-                    
+                    <input type="hidden" name="action" value="add">
                     <label for="amount">Investment Amount </label>
                     <input name="amount" type="text" tabindex="100" autofocus required>
                        

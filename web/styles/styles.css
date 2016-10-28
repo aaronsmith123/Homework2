@@ -61,6 +61,7 @@ Copyright © 2016 Aaron Smith & Xenia Zantello
     footer p {
         text-align: left;
         padding-left: 1em;
+        font-family: Arial, Verdana, sans-serif;
     }
     
 
@@ -127,6 +128,7 @@ Copyright © 2016 Aaron Smith & Xenia Zantello
     footer p {
         text-align: left;
         padding-left: 2em;
+        font-family: Arial, Verdana, sans-serif;
     }
 }
 
