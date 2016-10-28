@@ -52,9 +52,10 @@ public class CalculatorServlet extends HttpServlet {
         Double rateDouble = Double.parseDouble(rate);
         Double amountDouble = Double.parseDouble(amount);
         Double yearDouble = Double.parseDouble(year);
-        rateDouble = (1 + (rateDouble / 100.0));
+        rateDouble = (rateDouble / 100.0);
+        rate = rateDouble + "";
         
-        future = amountDouble * Math.pow(rateDouble, yearDouble) + "";
+        future = amountDouble * Math.pow((1 + rateDouble), yearDouble) + "";
         
         
         
