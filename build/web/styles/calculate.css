@@ -29,7 +29,7 @@ Copyright © 2016 Aaron Smith & Xenia Zantello
         
     }
     span {
-        display: block-inline;
+        
         position: relative;
         padding-left: 1em;
         text-align: right;
@@ -104,7 +104,7 @@ Copyright © 2016 Aaron Smith & Xenia Zantello
         
     }
     span {
-        display: block-inline;
+        
         position: relative;
         padding-left: 1em;
         text-align: right;
